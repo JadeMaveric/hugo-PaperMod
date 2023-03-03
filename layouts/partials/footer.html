@@ -5,11 +5,13 @@
     {{- else }}
     <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
     {{- end }}
+    {{- if not site.Params.disableTechStackAck }}
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+        <a href="https://github.com/jademaveric/hugo-PaperPortfolio/" rel="noopener" target="_blank">PaperPortfolio</a>
     </span>
+    {{- end }}
 </footer>
 {{- end }}
 
@@ -127,7 +129,7 @@
             // table containing LineNos and code
             codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
         } else {
-            // code blocks not having highlight as parent class
+            // code blocks ninseraot having highlight as parent class
             codeblock.parentNode.appendChild(copybutton);
         }
     });
